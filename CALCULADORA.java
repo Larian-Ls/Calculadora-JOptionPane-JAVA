@@ -23,10 +23,14 @@ public class CALCULADORA {
             } else if (operation == 3){ // Multiplicación
                 JOptionPane.showMessageDialog(null, num1 * num2);            
             } else if (operation == 4){ // División
-                JOptionPane.showMessageDialog(null, num1 / num2);            
+                if (num2 != 0){
+                    JOptionPane.showMessageDialog(null, num1 / num2);    
+                } else { // Cancelar operación si se divide entre 0
+                    JOptionPane.showMessageDialog(null, "No se puede dividir entre 0.");
+                }               
             }            
         } else {
-            JOptionPane.showMessageDialog(null,"Opción no valida."); // Si operation es mayor que 4 o igual a 0
+            JOptionPane.showMessageDialog(null,"Opción no valida.");
         }
     }
 }
