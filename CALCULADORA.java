@@ -13,7 +13,7 @@ public class CALCULADORA {
         
         // Mostrando las operaciones disponibles
         
-        double operation = Integer.parseInt(JOptionPane.showInputDialog("(1) Sumar\n(2) Restar\n(3) Multiplicar\n(4) Dividir\nElija una opción:"));
+        int operation = Integer.parseInt(JOptionPane.showInputDialog("(1) Sumar\n(2) Restar\n(3) Multiplicar\n(4) Dividir\nElija una opción:"));
         
         // Pidiendo los números
         
