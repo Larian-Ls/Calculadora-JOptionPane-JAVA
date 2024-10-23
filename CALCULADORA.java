@@ -7,6 +7,7 @@ public class CALCULADORA {
     public static void main(String[] args) {
         
         // Declarando e inicializando variables
+        
         double num1 = 0;
         double num2;
         
