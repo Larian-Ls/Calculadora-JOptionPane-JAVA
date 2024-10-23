@@ -6,43 +6,24 @@ public class CALCULADORA {
 
     public static void main(String[] args) {
         
-        // Declarando e inicializando variables
-        
-        double num1 = 0;
+        double num1 = 0; // Declarando e inicializando variables
         double num2;
         
-        // Mostrando las operaciones disponibles
+        int operation = Integer.parseInt(JOptionPane.showInputDialog("(1) Sumar\n(2) Restar\n(3) Multiplicar\n(4) Dividir\nElija una opción:")); // Mostrando las operaciones disponibles
         
-        int operation = Integer.parseInt(JOptionPane.showInputDialog("(1) Sumar\n(2) Restar\n(3) Multiplicar\n(4) Dividir\nElija una opción:"));
-        
-        // Pidiendo los números
-        
-        num1 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el primer número"));
+        num1 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el primer número")); // Pidiendo los números
         num2 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el segundo número"));
         
-        // Realizando operaciones según la elección
-        
-        // Suma
-        
-        if (operation == 1){
+        if (operation == 1){ // Suma
             JOptionPane.showMessageDialog(null, num1 + num2);
         }
-        
-        // Resta
-        
-        else if (operation == 2){
+        else if (operation == 2){ // Resta
             JOptionPane.showMessageDialog(null, num1 - num2);            
         }
-        
-        // Multiplicación
-        
-        else if (operation == 3){
+        else if (operation == 3){ // Multiplicación
             JOptionPane.showMessageDialog(null, num1 * num2);            
         }
-        
-        // División
-        
-        else if (operation == 4){
+        else if (operation == 4){ // División
             JOptionPane.showMessageDialog(null, num1 / num2);            
         }
     }
