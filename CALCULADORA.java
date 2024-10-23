@@ -26,7 +26,7 @@ public class CALCULADORA {
                 JOptionPane.showMessageDialog(null, num1 / num2);            
             }            
         } else {
-            JOptionPane.showMessageDialog(null,"Opción no valida.");
+            JOptionPane.showMessageDialog(null,"Opción no valida."); // Si operation es mayor que 4 o igual a 0
         }
     }
 }
