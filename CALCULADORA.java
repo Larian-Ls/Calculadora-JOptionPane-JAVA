@@ -17,22 +17,22 @@ public class Calculadora {
             num2 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el segundo número"));         
             
             switch (operation) {
-                case(1): // Suma
+                case 1: // Suma
                     JOptionPane.showMessageDialog(null, num1 + num2);
                     break;
-                case(2): // Resta
+                case 2: // Resta
                     JOptionPane.showMessageDialog(null, num1 - num2);
                     break;
-                case(3): // Multiplicación
+                case 3: // Multiplicación
                     JOptionPane.showMessageDialog(null, num1 * num2);
                     break;
-                case(4): // División
+                case 4: // División
                     if (num2 == 0){ // Si se intenta divir entre 0
                         JOptionPane.showMessageDialog(null,"No se puede dividir entre 0.");
                     } else {
                         JOptionPane.showMessageDialog(null, num1 / num2);
                     }
-                    break;   
+                    break;
             }
         } else { // Si se elige un número que no corresponde a una opción
             JOptionPane.showMessageDialog(null, "Opción no válida.");
