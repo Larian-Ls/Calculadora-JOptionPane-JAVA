@@ -2,7 +2,7 @@ package com.mycompany.calculadora;
 
 import javax.swing.JOptionPane;
 
-public class CALCULADORA {
+public class Calculadora {
 
     public static void main(String[] args) {
         
@@ -14,23 +14,28 @@ public class CALCULADORA {
         if (operation <=4 && operation != 0){
             
             num1 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el primer número")); // Pidiendo los números
-            num2 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el segundo número"));            
+            num2 = Double.parseDouble(JOptionPane.showInputDialog("Introduzca el segundo número"));         
             
-            if (operation == 1){ // Suma
-                JOptionPane.showMessageDialog(null, num1 + num2);
-            } else if (operation == 2){ // Resta
-                JOptionPane.showMessageDialog(null, num1 - num2);            
-            } else if (operation == 3){ // Multiplicación
-                JOptionPane.showMessageDialog(null, num1 * num2);            
-            } else if (operation == 4){ // División
-                if (num2 != 0){
-                    JOptionPane.showMessageDialog(null, num1 / num2);    
-                } else { // Cancelar operación si se divide entre 0
-                    JOptionPane.showMessageDialog(null, "No se puede dividir entre 0.");
-                }               
-            }            
-        } else {
-            JOptionPane.showMessageDialog(null,"Opción no valida.");
+            switch (operation) {
+                case(1): // Suma
+                    JOptionPane.showMessageDialog(null, num1 + num2);
+                    break;
+                case(2): // Resta
+                    JOptionPane.showMessageDialog(null, num1 - num2);
+                    break;
+                case(3): // Multiplicación
+                    JOptionPane.showMessageDialog(null, num1 * num2);
+                    break;
+                case(4): // División
+                    if (num2 == 0){ // Si se intenta divir entre 0
+                        JOptionPane.showMessageDialog(null,"No se puede dividir entre 0.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, num1 / num2);
+                    }
+                    break;   
+            }
+        } else { // Si se elige un número que no corresponde a una opción
+            JOptionPane.showMessageDialog(null, "Opción no válida.");
         }
     }
 }
